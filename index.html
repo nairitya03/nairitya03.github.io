@@ -1,22 +1,221 @@
----
----
 <!DOCTYPE html>
-<html lang="en">
-{% include header.html %}
+<html>
+	<head>
+		<title>Nairitya Tale - Personal Portfolio Website</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+			html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+			.blend 
+				{
+					mix-blend-mode: luminosity;
+				}
+					
+			.collapsible 	
+				{
+				  background-color: white;
+				  color: gray;
+				  cursor: pointer;
+				  padding: 18px;
+				  width: 100%;
+				  border: none;
+				  text-align: left;
+				  outline: none;
+				  font-size: 18px;
+				}
 
-<body>
-    {% include navbar.html %}
+			.active, .collapsible:hover
+				{
+				  background-color: light-grey;
+				  color: teal
+				}
 
-    {% include profile.html %}
+			.content 
+				{
+				  padding: 0 15px;
+				  max-height: 0;
+				  overflow: hidden;
+				  transition: max-height 0.2s ease-out;
+				  background-color: white;
+				}
+		</style>
+		
+		
+	</head>
+	
+<body class="w3-light-grey">
 
-    {% include projects.html %}
+<!-- Page Container -->
+<div class="w3-content w3-margin-top " style="max-width:1400px;">
 
-    {% include experience.html %}
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
     
-    {% include certificates.html %}
+      <div class="w3-white w3-text-grey w3-card-4">
+			<div class="w3-display-container">
+			  <img src="img/Avatar.jpg" style="width:100%" alt="Avatar">
+			  <div class="w3-display-bottomleft w3-container w3-text-white"> 
+			  <div class="blend">
+				
+					<h2>Nairitya Tale</h2>
+				</div>
+			  </div>
+			  
+			</div>
+			
+			<div class="w3-container">
+			  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"aria-hidden="true"></i> talenairitya@gmail.com</p>
+			  <p><i class="fa fa-phone fa-fw w3-margin-right fa-fw w3-margin-right w3-large w3-text-teal"aria-hidden="true"></i> +917224964799</p>
+			  <script src="https://tryhackme.com/badge/280802"></script>
+			  <br>
+			  <p class="w3-large"><h5><b><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-large w3-text-teal" aria-hidden="true"></i>Education</b></h5></p>
+				<div class="w3-container">
+					
+					<h6><b>B. Tech - Computer Science and Engg.</b></h6>
+					<p> Oriental Institute of Science and Technology, Bhopal</p>
+					<p class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right "aria-hidden="true"></i>2017 - <span class="w3-tag w3-teal w3-round">Current</span></p>
+				</div>
+				
+				<div class="w3-container">
+					<h6><b> High School</b></h6>
+					<p>St Paul Higher Secondary School, Bhopal </p>
+					<p class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"aria-hidden="true"></i>2016 - 2017</p>
+				</div>	
+			
+			</div>
+      </div><br>
 
-    {% include education.html %}
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+			
+			<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Internships & Trainings</h2>
+			
+			<div class="w3-container">
+			  <h5 class="w3-opacity"><b>Ethical Hacking & Cybersecurity at Intern Supraja Technologies</b></h5>
+			  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2020 - Sep 2020</h6>
+			  <p> </p>
+			</div>
+			
+			<div class="w3-container">
+			  <h5 class="w3-opacity"><b>DevMLOps Trainee / Unnati Development and Training Centre Pvt. Ltd. </b></h5>
+			  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2020 - June 2020</h6>
+			</div>
+
+			<div class="w3-container">
+			  <h5 class="w3-opacity"><b>IoT Trainee / TechSim+ - The Symbol of Expertise</b></h5>
+			  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2019 - June 2019</h6>
+			  <br>
+			</div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-top">
+			
+			<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+			
+			<div class="list-style-type">
+		  
+			  <a type="toggle" class="collapsible"> Computer Vision Projects <i class="fa fa-level-down fa-fw w3-margin-right w3-text-teal" aria-hidden="true"></i></a>
+			  <div class="content">
+				  <ul>
+				  <li> Live Face Detection   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Face%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Car Detection   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Car%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Pedestrian Detection   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Pedestrian%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  </ul>
+			  </div>
+			 <br>
+			 
+			 <a type="toggle" class="collapsible"> Pygame Projects <i class="fa fa-level-down fa-fw w3-margin-right w3-text-teal" aria-hidden="true"></i></a>
+			 <div class="content">
+				  <ul>
+				  <li> Music Player    <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Face%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Text to Audio   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Car%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Classic Tiles   <a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Classic%20Tiles" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  </ul>
+			 </div> 
+			 <br>
+			 
+			 <a type="toggle" class="collapsible"> Side Hustle <i class="fa fa-level-down fa-fw w3-margin-right w3-text-teal" aria-hidden="true"></i></a>
+			 <div class="content">
+				  <ul>
+				  <li> Caesar Decipher  <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Caesar%20Decipher" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Password Generator   <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Password%20Generator" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> KeyLogger  <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/KeyLogger" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Web Browser  <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Web%20Browser" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  
+				  </ul>
+			 </div>
+					<br>	
+			</div>
+      </div>
+	  <div class="w3-container w3-card w3-white w3-margin-top">
+			 <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-link fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>CTF Writeups</h2>
+			 <div class="list-style-type">
+			  
+					<a type="toggle" class="collapsible"> TryHackMe Writeups <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
+					<div class="content">
+						  <ul>
+						  <li> C0ldd BOX   <a href="https://github.com/nairitya03/CTF-WriteUps/tree/main/THM/C0ldd_BOX" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  <li> Chocolate Factory   <a href="https://github.com/nairitya03/CTF-WriteUps/tree/main/THM/Chocolate%20Factory" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  <li> Cyborg   <a href="https://github.com/nairitya03/CTF-WriteUps/tree/main/THM/Cyborg" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  </ul>
+					</div>
+					<br>
+					 
+					<a type="toggle" class="collapsible">GrimmCon 2020 <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
+					<div class="content">
+						  <ul>
+						  <li> GrimmCon 2020   <a href="https://github.com/nairitya03/CTF-WriteUps/tree/main/GrimmCon%20CTF%202020/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  </ul>
+					</div>
+					<br>
+			 </div>				
+			 <br>
+	  </div>
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me here!</p>
+  <a href="https://github.com/nairitya03" target="_blank"><i class="fa fa-github w3-hover-opacity w3-xlarge"></i></a>
+  <a href="https://www.linkedin.com/in/nairityatale" target="_blank"><i class="fa fa-linkedin w3-hover-opacity w3-xlarge"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/css/default.asp" target="_blank">w3.css</a> & <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">fontawesome</a> </p>
+</footer>
+
+
+
+
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.maxHeight){
+		  content.style.maxHeight = null;
+		} else {
+		  content.style.maxHeight = content.scrollHeight + "px";
+		} 
+	  });
+	}	
+</script>
 </body>
-
 </html>
- 
