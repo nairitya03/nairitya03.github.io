@@ -1,304 +1,253 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Nairitya Tale - Personal Portfolio Website</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<style>
-			html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-			.blend {
-				mix-blend-mode: luminosity;
-			}
-			.collapsible {
-				background-color: white;
-				color: gray;
-				cursor: pointer;
-				padding: 18px;
-				width: 100%;
-				border: none;
-				text-align: left;
-				outline: none;
-				font-size: 18px;
-			}
-			.active, .collapsible:hover {
-				background-color: light-grey;
-				color: teal
-			}
-			.content {
-				padding: 0 15px;
-				max-height: 0;
-				overflow: hidden;
-				transition: max-height 0.2s ease-out;
-				background-color: white;
-			}
-			/* Glitch effect */
-			.glitch {
-				position: relative;
-				color: #20e3b2;
-				font-weight: 700;
-				font-size: 2.3rem;
-				letter-spacing: 1px;
-				display: inline-block;
-				animation: glitch-skew 1s infinite linear alternate-reverse;
-			}
-			.glitch:before,
-			.glitch:after {
-				content: attr(data-text);
-				position: absolute;
-				left: 0; top: 0;
-				width: 100%;
-				overflow: hidden;
-				color: #00fff7;
-				opacity: 0.7;
-				z-index: -1;
-				clip: rect(0, 900px, 0, 0);
-			}
-			.glitch:before {
-				animation: glitch-anim 1s infinite linear alternate-reverse;
-				color: #00fff7;
-			}
-			.glitch:after {
-				animation: glitch-anim2 0.8s infinite linear alternate-reverse;
-				color: #ff00c8;
-			}
-			@keyframes glitch-anim {
-				0% { clip: rect(0, 9999px, 0, 0); }
-				5% { clip: rect(0, 9999px, 15px, 0); left:2px;}
-				10% { clip: rect(0, 9999px, 0, 0); left:0;}
-				15% { clip: rect(0, 9999px, 10px, 0); left:-2px;}
-				20% { clip: rect(0, 9999px, 0, 0); left:0;}
-				100% { clip: rect(0, 9999px, 0, 0);}
-			}
-			@keyframes glitch-anim2 {
-				0% { clip: rect(0, 9999px, 0, 0);}
-				10% { clip: rect(5px, 9999px, 20px, 0); left:-2px;}
-				15% { clip: rect(0, 9999px, 0, 0); left:0;}
-				25% { clip: rect(10px, 9999px, 25px, 0); left:2px;}
-				30% { clip: rect(0, 9999px, 0, 0); left:0;}
-				100% { clip: rect(0, 9999px, 0, 0);}
-			}
-			@keyframes glitch-skew {
-				0% { transform: skew(0deg);}
-				10% { transform: skew(-2deg);}
-				20% { transform: skew(2deg);}
-				30% { transform: skew(-1deg);}
-				40% { transform: skew(1deg);}
-				50% { transform: skew(0deg);}
-				100% { transform: skew(0deg);}
-			}
-			@media (max-width: 640px) {
-				.glitch {
-					font-size: 1.2rem;
-				}
-			}
-		</style>
-	</head>
-<body class="w3-light-grey">
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top " style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairitya Tale - Cybersecurity Engineer & Developer</title>
     
-      <div class="w3-white w3-text-grey w3-card-4">
-			<div class="w3-display-container">
-			  <img src="img/Avatar.jpg" style="width:100%" alt="Avatar">
-			  <div class="w3-display-bottomleft w3-container w3-text-white"> 
-			  <div>
-				<h2 class="glitch" data-text="Nairitya Tale">Nairitya Tale</h2>
-				<!-- Just the name is glitched -->
-			  </div>
-			  </div>
-			  
-			</div>
-			
-			<div class="w3-container">
-			  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"aria-hidden="true"></i> talenairitya@gmail.com</p>
-			  <p><i class="fa fa-phone fa-fw w3-margin-right fa-fw w3-margin-right w3-large w3-text-teal"aria-hidden="true"></i> +91-7224964799</p>
-			  
-			<script src="https://tryhackme.com/badge/280802"></script>
-
-			
-			<p class="w3-large"><h5><b><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-large w3-text-teal" aria-hidden="true"></i>Education</b></h5></p>
-				<div class="w3-container">
-					
-					<h6><b> B.Tech - Computer Science and Engg. </b></h6>
-					<p> Oriental Institute of Science and Technology, Bhopal </p>
-					<p class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right "aria-hidden="true"></i>2017 - <span class="w3-tag w3-teal w3-round">Current</span></p>
-				</div>
-				
-				<div class="w3-container">
-					<h6><b> High School</b></h6>
-					<p> St Paul Higher Secondary School, Bhopal </p>
-					<p class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"aria-hidden="true"></i>2016 - 2017</p>
-				</div>	
-			
-			<p class="w3-large"><h5><b><i class="fa fa-superpowers fa-fw w3-margin-right w3-large w3-text-teal" aria-hidden="true"></i>Hobbies</b></h5></p>
-				<div class="w3-container">
-					<h6> Gaming & Editing  </h6>
-					<h6> Loves to Play Volleyball & Table Tennis </h6>
-					<h6> Reads Genere Like Mystry & Thriller  </h6>
-					
-				</div>
-			<p class="w3-large"><h5><b><i class="fa fa-globe fa-fw w3-margin-right w3-large w3-text-teal" aria-hidden="true"></i>Languages Known</b></h5></p>
-				<div class="w3-container">
-					<h6> Hindi </h6>
-					<h6> English</h6>	
-				</div>
-			</div>
-	<br>
-      </div><br>
-
-    <!-- End Left Column -->
-    </div>
-
-    <!-- Right Column -->
-    <div class="w3-twothird">
+    <!-- Modern CSS Framework - Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-			
-	<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Internships </h2>
-
-		<div class="w3-container">
-		  <h5 class="w3-opacity"><b>Web Application VAPT Intern at Supraja Technologies</b></h5>
-		  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August 2020 - May 2021</h6>
-		</div>
-
-		<div class="w3-container">
-		  <h5 class="w3-opacity"><b>DevMLOps Trainee at Unnati Development and Training Centre Pvt. Ltd. </b></h5>
-		  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2020 - July 2020</h6>
-		</div>
-
-		<div class="w3-container">
-		  <h5 class="w3-opacity"><b>IoT Trainee at TechSim+ - The Symbol of Expertise</b></h5>
-		  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2019 - June 2019</h6>
-		  <br>
-		</div>
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-top">
-			
-			<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
-			
-			<div class="list-style-type">
-		  
-			  <a type="toggle" class="collapsible"> Computer Vision Projects <i class="fa fa-level-down fa-fw w3-margin-right w3-text-teal" aria-hidden="true"></i></a>
-			  <div class="content">
-				  <ul>
-				  <li> Live Face Detection   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Face%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  <li> Car Detection   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Car%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  <li> Pedestrian Detection   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Pedestrian%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  </ul>
-			  </div>
-			 <br>
-			 
-			 <a type="toggle" class="collapsible"> Pygame Projects <i class="fa fa-level-down fa-fw w3-margin-right w3-text-teal" aria-hidden="true"></i></a>
-			 <div class="content">
-				  <ul>
-				  <li> Music Player    <a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Music%20Player" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  <li> Text to Audio   <a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Text%20to%20Audio" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  <li> Classic Tiles   <a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Classic%20Tiles" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  </ul>
-			 </div> 
-			 <br>
-			 
-			 <a type="toggle" class="collapsible"> Side Hustle <i class="fa fa-level-down fa-fw w3-margin-right w3-text-teal" aria-hidden="true"></i></a>
-			 <div class="content">
-				  <ul>
-				  <li> Caesar Decipher  <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Caesar%20Decipher" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  <li> Password Generator   <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Password%20Generator" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  <li> KeyLogger  <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/KeyLogger" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  <li> Web Browser  <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Web%20Browser" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-				  
-				  </ul>
-			 </div>
-			
-			</div>
-	       <br>	
-      </div>
-	  <div class="w3-container w3-card w3-white w3-margin-top">
-			 <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-link fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>CTF Writeups</h2>
-			 <div class="list-style-type">
-			 
-					<a type="toggle" class="collapsible"> NahamCon 2021 <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
-					<div class="content">
-						  <ul>
-						  <li> NahamCon 2021   <a href="https://nairitya03.github.io/CTF-WriteUps/NahamCon%20CTF%202021/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-						  </ul>
-					</div>
-					<br>
-					
-					<a type="toggle" class="collapsible"> GrimmCon 2020 <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
-					<div class="content">
-						  <ul>
-						  <li> GrimmCon 2020   <a href="https://nairitya03.github.io/CTF-WriteUps/GrimmCon%20CTF%202020/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-						  </ul>
-					</div>
-					<br>
-					<a type="toggle" class="collapsible"> TryHackMe Rooms <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
-					<div class="content">
-						<ul>
-						  <li> Pickle Rick <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Pickle%20Rick" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-						  <li> Simple CTF <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Easy%20CTF" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>			
-						  <li> RootME <a href="https://nairitya03.github.io/CTF-WriteUps/THM/RootME/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>				  
-						  <li> C0ldd Box   <a href="https://nairitya03.github.io/CTF-WriteUps/THM/C0ldd_BOX/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-						  <li> Chocolate Factory   <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Chocolate%20Factory" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-						  <li> Cyborg   <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Cyborg" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-						  <li> Madeye's Castle  <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Madeye's%20Castle" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-						</ul>
-					</div>
-					<br>
-					<a type="toggle" class="collapsible"> HackTheBox Rooms <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
-					<div class="content">
-						  <ul>
-						  <li> Archetype  <a href="https://nairitya03.github.io/CTF-WriteUps/HTB/Archetype/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
-						  </ul>
-					</div>
-					<br>
-			 </div>				
-			 <br>
-	  </div>
-    <!-- End Right Column -->
-    </div>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #00BFA6 0%, #0088A3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">NT.</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-teal-500">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-teal-500">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:text-teal-500">Projects</a>
+                <a href="#ctf" class="text-gray-600 hover:text-teal-500">CTF</a>
+                <a href="#contact" class="text-gray-600 hover:text-teal-500">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me here!</p>
-  <a href="https://github.com/nairitya03" target="_blank"><i class="fa fa-github w3-hover-opacity w3-xlarge"></i></a>
-  <a href="https://www.linkedin.com/in/nairityatale" target="_blank"><i class="fa fa-linkedin w3-hover-opacity w3-xlarge"></i></a>
-  <p>Powered by <a href="https://www.w3schools.com/css/default.asp" target="_blank">w3.css</a> & <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">fontawesome</a> </p>
-</footer>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-5xl font-bold mb-6">
+                        Hi, I'm <span class="gradient-text">Nairitya Tale</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Cybersecurity Engineer & Full Stack Developer
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/nairitya03" target="_blank" 
+                           class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/nairityatale" target="_blank"
+                           class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="img/Avatar.jpg" alt="Nairitya Tale" 
+                         class="rounded-full w-64 h-64 object-cover mx-auto shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold mb-4">Skills</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge px-4 py-2 bg-teal-100 text-teal-800 rounded-full">Penetration Testing</span>
+                        <span class="skill-badge px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Web Security</span>
+                        <span class="skill-badge px-4 py-2 bg-purple-100 text-purple-800 rounded-full">Python</span>
+                        <span class="skill-badge px-4 py-2 bg-green-100 text-green-800 rounded-full">Computer Vision</span>
+                        <span class="skill-badge px-4 py-2 bg-red-100 text-red-800 rounded-full">CTF</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-4">Education</h3>
+                    <div class="mb-6">
+                        <h4 class="font-medium">B.Tech - Computer Science and Engineering</h4>
+                        <p class="text-gray-600">Oriental Institute of Science and Technology, Bhopal</p>
+                        <p class="text-teal-600">2017 - 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold mb-2">Web Application VAPT Intern</h3>
+                    <p class="text-teal-600 mb-2">Supraja Technologies</p>
+                    <p class="text-gray-600">August 2020 - May 2021</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-2">DevMLOps Trainee</h3>
+                    <p class="text-teal-600 mb-2">Unnati Development and Training Centre Pvt. Ltd.</p>
+                    <p class="text-gray-600">May 2020 - July 2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Computer Vision Projects -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Computer Vision Projects</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Face%20Detection" 
+                                  class="text-teal-600 hover:text-teal-800">Live Face Detection</a></li>
+                            <li><a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Car%20Detection"
+                                  class="text-teal-600 hover:text-teal-800">Car Detection</a></li>
+                            <li><a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Pedestrian%20Detection"
+                                  class="text-teal-600 hover:text-teal-800">Pedestrian Detection</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-<script>
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
+                <!-- Pygame Projects -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Pygame Projects</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Music%20Player"
+                                  class="text-teal-600 hover:text-teal-800">Music Player</a></li>
+                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Text%20to%20Audio"
+                                  class="text-teal-600 hover:text-teal-800">Text to Audio</a></li>
+                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Classic%20Tiles"
+                                  class="text-teal-600 hover:text-teal-800">Classic Tiles</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-		this.classList.toggle("active");
-		var content = this.nextElementSibling;
-		if (content.style.maxHeight){
-		  content.style.maxHeight = null;
-		} else {
-		  content.style.maxHeight = content.scrollHeight + "px";
-		} 
-	  });
-	}	
-</script>
+                <!-- Side Projects -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Security Tools</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Caesar%20Decipher"
+                                  class="text-teal-600 hover:text-teal-800">Caesar Decipher</a></li>
+                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Password%20Generator"
+                                  class="text-teal-600 hover:text-teal-800">Password Generator</a></li>
+                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/KeyLogger"
+                                  class="text-teal-600 hover:text-teal-800">KeyLogger</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTF Section -->
+    <section id="ctf" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">CTF Writeups</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- TryHackMe -->
+                <div class="bg-gray-50 rounded-xl shadow-lg p-8" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold mb-6">TryHackMe Rooms</h3>
+                    <div class="mb-6">
+                        <script src="https://tryhackme.com/badge/280802"></script>
+                    </div>
+                    <ul class="space-y-2">
+                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/THM/Pickle%20Rick"
+                              class="text-teal-600 hover:text-teal-800">Pickle Rick</a></li>
+                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/THM/Chocolate%20Factory"
+                              class="text-teal-600 hover:text-teal-800">Chocolate Factory</a></li>
+                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/THM/Madeye's%20Castle"
+                              class="text-teal-600 hover:text-teal-800">Madeye's Castle</a></li>
+                    </ul>
+                </div>
+
+                <!-- Other CTFs -->
+                <div class="bg-gray-50 rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-6">Featured CTF Events</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/NahamCon%20CTF%202021/"
+                              class="text-teal-600 hover:text-teal-800">NahamCon 2021</a></li>
+                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/GrimmCon%20CTF%202020/"
+                              class="text-teal-600 hover:text-teal-800">GrimmCon 2020</a></li>
+                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/HTB/Archetype/"
+                              class="text-teal-600 hover:text-teal-800">HackTheBox - Archetype</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:talenairitya@gmail.com" class="text-gray-600 hover:text-teal-500">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+                <a href="https://github.com/nairitya03" target="_blank" class="text-gray-600 hover:text-teal-500">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/nairityatale" target="_blank" class="text-gray-600 hover:text-teal-500">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2025 Nairitya Tale. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
 </body>
 </html>
