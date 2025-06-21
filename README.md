@@ -1,5 +1,38 @@
-<h1><p align="center"> <a href="https://nairitya03.github.io/"> Portfolio Website </a></p></h1>
+# nairitya03.github.io
 
-<h2><p align="center"> This is a Simple Portfolio Website. It was built with templates from <a href="https://www.w3schools.com/w3css/default.asp"> W3school </a> and <a href="https://www.w3schools.com/w3css/default.asp"> Fontawsome </a>.</h2></p>
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fnairitya03.github.io)](https://nairitya03.github.io)
 
-<p align="center"><img src ="./img/sample.png"></p>
+Personal Résumé Website showcasing my professional profile, built with HTML and CSS.
+
+## 🌐 Live Preview
+
+The website is live at [nairitya03.github.io](https://nairitya03.github.io)
+
+[![Website Preview](https://github.com/nairitya03/nairitya03.github.io/blob/main/preview.jpg?raw=true)](https://nairitya03.github.io)
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- GitHub Pages (for hosting)
+
+## 📋 Features
+
+- Professional Resume/CV presentation
+- Work Experience Timeline
+- Education History
+- Project Showcase
+- Contact Information
+- Responsive Design
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nairitya03/nairitya03.github.io.git
+   ```
+2. Open `index.html` in your browser to view the website locally
+
+## 📝 Note
+
+Feel free to fork this repository and modify it for your own use. Don't forget to give it a star if you find it helpful!
