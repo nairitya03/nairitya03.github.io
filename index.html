@@ -1,273 +1,262 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nairitya Tale - Cybersecurity Engineer & Developer</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #00BFA6 0%, #0088A3 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .skill-badge {
-            transition: all 0.3s ease;
-        }
-        .skill-badge:hover {
-            transform: translateY(-5px);
-        }
-    </style>
-    <script>
-      // Tailwind dark mode config
-      tailwind.config = {
-        darkMode: 'class'
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nairitya Tale | Cybersecurity Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Fira Mono', 'Source Code Pro', 'Menlo', 'Monaco', monospace;
+      background: #14181e;
+      color: #b9ffe8;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* Glitch effect */
+    .glitch {
+      position: relative;
+      color: #b9ffe8;
+      font-weight: 700;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      display: inline-block;
+      animation: glitch-skew 1s infinite linear alternate-reverse;
+    }
+    .glitch:before,
+    .glitch:after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%;
+      overflow: hidden;
+      color: #00fff7;
+      opacity: 0.7;
+      z-index: -1;
+      clip: rect(0, 900px, 0, 0);
+    }
+    .glitch:before {
+      animation: glitch-anim 1s infinite linear alternate-reverse;
+      color: #00fff7;
+    }
+    .glitch:after {
+      animation: glitch-anim2 0.8s infinite linear alternate-reverse;
+      color: #ff00c8;
+    }
+    @keyframes glitch-anim {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      5% { clip: rect(0, 9999px, 15px, 0); left:2px;}
+      10% { clip: rect(0, 9999px, 0, 0); left:0;}
+      15% { clip: rect(0, 9999px, 10px, 0); left:-2px;}
+      20% { clip: rect(0, 9999px, 0, 0); left:0;}
+      100% { clip: rect(0, 9999px, 0, 0);}
+    }
+    @keyframes glitch-anim2 {
+      0% { clip: rect(0, 9999px, 0, 0);}
+      10% { clip: rect(5px, 9999px, 20px, 0); left:-2px;}
+      15% { clip: rect(0, 9999px, 0, 0); left:0;}
+      25% { clip: rect(10px, 9999px, 25px, 0); left:2px;}
+      30% { clip: rect(0, 9999px, 0, 0); left:0;}
+      100% { clip: rect(0, 9999px, 0, 0);}
+    }
+    @keyframes glitch-skew {
+      0% { transform: skew(0deg);}
+      10% { transform: skew(-2deg);}
+      20% { transform: skew(2deg);}
+      30% { transform: skew(-1deg);}
+      40% { transform: skew(1deg);}
+      50% { transform: skew(0deg);}
+      100% { transform: skew(0deg);}
+    }
+    /* Blinking cursor */
+    .terminal-type::after {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 1.2em;
+      background: #b9ffe8;
+      margin-left: 5px;
+      vertical-align: middle;
+      animation: blink-cursor 1s steps(1) infinite;
+    }
+    @keyframes blink-cursor {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    /* CRT scanline overlay */
+    .crt {
+      pointer-events: none;
+      position: fixed;
+      top:0; left:0; width:100vw; height:100vh;
+      z-index:999;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.01) 0px,
+        rgba(255,255,255,0.04) 2px,
+        transparent 4px,
+        transparent 6px
+      );
+      mix-blend-mode: lighten;
+      opacity: 0.3;
+    }
+    /* Section prompt style */
+    .section-title {
+      color: #00fff7;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    .prompt {
+      color: #7fff00;
+      margin-right: 8px;
+    }
+    a {
+      color: #7fff00;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #fff;
+      background: #00fff7;
+    }
+    /* Responsive glitch font size */
+    @media (max-width: 640px) {
+      .glitch {
+        font-size: 1.5rem;
       }
-    </script>
+    }
+  </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white dark:bg-gray-950 shadow-sm z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold gradient-text">NT.</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">About</a>
-                <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">Experience</a>
-                <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">Projects</a>
-                <a href="#ctf" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">CTF</a>
-                <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">Contact</a>
-            </div>
-            <!-- Dark mode toggle button -->
-            <button id="dark-toggle" aria-label="Toggle dark mode"
-                class="ml-4 w-10 h-10 flex items-center justify-center text-gray-600 dark:text-yellow-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-                <i id="dark-toggle-icon" class="fas fa-moon text-xl"></i>
-            </button>
-        </div>
-    </nav>
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <h1 class="text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-                        Hi, I'm <span class="gradient-text">Nairitya Tale</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                        Cybersecurity Engineer & Full Stack Developer
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/nairitya03" target="_blank" 
-                           class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition">
-                            <i class="fab fa-github mr-2"></i>GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/in/nairityatale" target="_blank"
-                           class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                            <i class="fab fa-linkedin mr-2"></i>LinkedIn
-                        </a>
-                    </div>
-                </div>
-                <div class="md:w-1/2" data-aos="fade-left">
-                    <img src="img/Avatar.jpg" alt="Nairitya Tale" 
-                         class="rounded-full w-64 h-64 object-cover mx-auto shadow-xl border-4 border-teal-400 dark:border-teal-600">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">About Me</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="bg-white dark:bg-gray-950 p-8 rounded-xl shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Skills</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-badge px-4 py-2 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 rounded-full">Penetration Testing</span>
-                        <span class="skill-badge px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">Web Security</span>
-                        <span class="skill-badge px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full">Python</span>
-                        <span class="skill-badge px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">Computer Vision</span>
-                        <span class="skill-badge px-4 py-2 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full">CTF</span>
-                    </div>
-                </div>
-                <div class="bg-white dark:bg-gray-950 p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Education</h3>
-                    <div class="mb-6">
-                        <h4 class="font-medium text-gray-800 dark:text-gray-200">B.Tech - Computer Science and Engineering</h4>
-                        <p class="text-gray-600 dark:text-gray-400">Oriental Institute of Science and Technology, Bhopal</p>
-                        <p class="text-teal-600 dark:text-teal-400">2017 - 2021</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Experience</h2>
-            <div class="space-y-8">
-                <div class="bg-gray-50 dark:bg-gray-950 p-8 rounded-xl shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Web Application VAPT Intern</h3>
-                    <p class="text-teal-600 dark:text-teal-400 mb-2">Supraja Technologies</p>
-                    <p class="text-gray-600 dark:text-gray-300">August 2020 - May 2021</p>
-                </div>
-                <div class="bg-gray-50 dark:bg-gray-950 p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">DevMLOps Trainee</h3>
-                    <p class="text-teal-600 dark:text-teal-400 mb-2">Unnati Development and Training Centre Pvt. Ltd.</p>
-                    <p class="text-gray-600 dark:text-gray-300">May 2020 - July 2020</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Computer Vision Projects -->
-                <div class="bg-white dark:bg-gray-950 rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Computer Vision Projects</h3>
-                        <ul class="space-y-2">
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Face%20Detection" 
-                                  class="text-teal-600 dark:text-teal-400 hover:underline">Live Face Detection</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Car%20Detection"
-                                  class="text-teal-600 dark:text-teal-400 hover:underline">Car Detection</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Pedestrian%20Detection"
-                                  class="text-teal-600 dark:text-teal-400 hover:underline">Pedestrian Detection</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Pygame Projects -->
-                <div class="bg-white dark:bg-gray-950 rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Pygame Projects</h3>
-                        <ul class="space-y-2">
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Music%20Player"
-                                  class="text-teal-600 dark:text-teal-400 hover:underline">Music Player</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Text%20to%20Audio"
-                                  class="text-teal-600 dark:text-teal-400 hover:underline">Text to Audio</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Classic%20Tiles"
-                                  class="text-teal-600 dark:text-teal-400 hover:underline">Classic Tiles</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Side Projects -->
-                <div class="bg-white dark:bg-gray-950 rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Security Tools</h3>
-                        <ul class="space-y-2">
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Caesar%20Decipher"
-                                  class="text-teal-600 dark:text-teal-400 hover:underline">Caesar Decipher</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Password%20Generator"
-                                  class="text-teal-600 dark:text-teal-400 hover:underline">Password Generator</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/KeyLogger"
-                                  class="text-teal-600 dark:text-teal-400 hover:underline">KeyLogger</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- CTF Section -->
-    <section id="ctf" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">CTF Writeups</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- TryHackMe -->
-                <div class="bg-gray-50 dark:bg-gray-950 rounded-xl shadow-lg p-8" data-aos="fade-up">
-                    <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">TryHackMe Rooms</h3>
-                    <div class="mb-6">
-                        <script src="https://tryhackme.com/badge/280802"></script>
-                    </div>
-                    <ul class="space-y-2">
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/THM/Pickle%20Rick"
-                              class="text-teal-600 dark:text-teal-400 hover:underline">Pickle Rick</a></li>
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/THM/Chocolate%20Factory"
-                              class="text-teal-600 dark:text-teal-400 hover:underline">Chocolate Factory</a></li>
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/THM/Madeye's%20Castle"
-                              class="text-teal-600 dark:text-teal-400 hover:underline">Madeye's Castle</a></li>
-                    </ul>
-                </div>
-                <!-- Other CTFs -->
-                <div class="bg-gray-50 dark:bg-gray-950 rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Featured CTF Events</h3>
-                    <ul class="space-y-2">
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/NahamCon%20CTF%202021/"
-                              class="text-teal-600 dark:text-teal-400 hover:underline">NahamCon 2021</a></li>
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/GrimmCon%20CTF%202020/"
-                              class="text-teal-600 dark:text-teal-400 hover:underline">GrimmCon 2020</a></li>
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/HTB/Archetype/"
-                              class="text-teal-600 dark:text-teal-400 hover:underline">HackTheBox - Archetype</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
-            <div class="flex justify-center space-x-6">
-                <a href="mailto:talenairitya@gmail.com" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">
-                    <i class="fas fa-envelope text-2xl"></i>
-                </a>
-                <a href="https://github.com/nairitya03" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">
-                    <i class="fab fa-github text-2xl"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/nairityatale" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">
-                    <i class="fab fa-linkedin text-2xl"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-gray-900 dark:bg-black text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-400">&copy; 2025 Nairitya Tale. All rights reserved.</p>
-        </div>
-    </footer>
-    <!-- AOS Init -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800, offset: 100, once: true });
-    </script>
-    <!-- Dark mode toggle script -->
-    <script>
-      const html = document.documentElement;
-      const toggleBtn = document.getElementById('dark-toggle');
-      const icon = document.getElementById('dark-toggle-icon');
-      // Check for saved theme in localStorage
-      if (localStorage.theme === 'dark' || 
-          (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          html.classList.add('dark');
-          icon.classList.remove('fa-moon');
-          icon.classList.add('fa-sun');
+<body>
+  <!-- CRT scanlines overlay -->
+  <div class="crt"></div>
+
+  <!-- Navigation (terminal style) -->
+  <nav class="w-full flex justify-center py-4 bg-opacity-0 z-50">
+    <div class="space-x-8 text-base">
+      <a href="#about" class="hover:text-[#00fff7] transition">about</a>
+      <a href="#experience" class="hover:text-[#00fff7] transition">experience</a>
+      <a href="#projects" class="hover:text-[#00fff7] transition">projects</a>
+      <a href="#ctf" class="hover:text-[#00fff7] transition">ctf</a>
+      <a href="#contact" class="hover:text-[#00fff7] transition">contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center justify-center min-h-[70vh] text-center px-6 pt-16">
+    <div>
+      <span class="glitch block mb-2" data-text="nairitya tale">
+        nairitya tale
+      </span>
+    </div>
+    <div class="terminal-type text-xl sm:text-2xl mt-2 mb-6" id="typewriter"></div>
+    <div class="flex space-x-6 justify-center mt-2">
+      <a href="https://github.com/nairitya03" target="_blank" class="text-xl hover:text-[#00fff7]"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/nairityatale" target="_blank" class="text-xl hover:text-[#00fff7]"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:talenairitya@gmail.com" class="text-xl hover:text-[#00fff7]"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-2xl mx-auto my-12 px-6">
+    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>about</div>
+    <div class="mb-4">
+      <span class="prompt">[+] </span>
+      I'm a cybersecurity engineer and developer with a passion for breaking, building, and securing things. I specialize in penetration testing, web application security, and CTFs. I love building tools and sharing knowledge with the community.
+    </div>
+    <div>
+      <span class="prompt">[+] </span>
+      <span class="font-bold">Skills:</span> Penetration Testing, Web Security, Python, Computer Vision, CTF Writeups, Reverse Engineering
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="max-w-2xl mx-auto my-12 px-6">
+    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>experience</div>
+    <div class="mb-3">
+      <span class="prompt">[2020-2021]</span> Web Application VAPT Intern @ Supraja Technologies
+    </div>
+    <div class="mb-3">
+      <span class="prompt">[2020]</span> DevMLOps Trainee @ Unnati Development and Training Centre Pvt. Ltd.
+    </div>
+    <div>
+      <span class="prompt">[2019]</span> IoT Trainee @ TechSim+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-2xl mx-auto my-12 px-6">
+    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>projects</div>
+    <div class="mb-2"><span class="prompt">[cv]</span> <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Face%20Detection">Live Face Detection</a></div>
+    <div class="mb-2"><span class="prompt">[cv]</span> <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Car%20Detection">Car Detection</a></div>
+    <div class="mb-2"><span class="prompt">[cv]</span> <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Pedestrian%20Detection">Pedestrian Detection</a></div>
+    <div class="mb-2"><span class="prompt">[pygame]</span> <a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Music%20Player">Music Player</a></div>
+    <div class="mb-2"><span class="prompt">[mini]</span> <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Caesar%20Decipher">Caesar Decipher</a></div>
+    <div class="mb-2"><span class="prompt">[mini]</span> <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Password%20Generator">Password Generator</a></div>
+    <div class="mb-2"><span class="prompt">[tools]</span> <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/KeyLogger">KeyLogger</a></div>
+  </section>
+
+  <!-- CTF Writeups -->
+  <section id="ctf" class="max-w-2xl mx-auto my-12 px-6">
+    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>ctf writeups</div>
+    <div class="mb-2"><span class="prompt">[thm]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Pickle%20Rick">Pickle Rick</a></div>
+    <div class="mb-2"><span class="prompt">[thm]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Chocolate%20Factory">Chocolate Factory</a></div>
+    <div class="mb-2"><span class="prompt">[htb]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/HTB/Archetype/">HackTheBox - Archetype</a></div>
+    <div class="mb-2"><span class="prompt">[event]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/NahamCon%20CTF%202021/">NahamCon 2021</a></div>
+    <div class="mb-2"><span class="prompt">[event]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/GrimmCon%20CTF%202020/">GrimmCon 2020</a></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-2xl mx-auto my-12 px-6">
+    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>contact</div>
+    <div class="mb-2">
+      <span class="prompt">[mail]</span> <a href="mailto:talenairitya@gmail.com">talenairitya@gmail.com</a>
+    </div>
+    <div class="mb-2">
+      <span class="prompt">[github]</span> <a href="https://github.com/nairitya03" target="_blank">github.com/nairitya03</a>
+    </div>
+    <div class="mb-2">
+      <span class="prompt">[linkedin]</span> <a href="https://www.linkedin.com/in/nairityatale" target="_blank">linkedin.com/in/nairityatale</a>
+    </div>
+  </section>
+
+  <footer class="w-full text-center py-6 text-xs text-[#00fff7] tracking-widest mt-16">
+    &copy; 2025 nairitya tale | built with <span class="text-[#7fff00]">html</span>, <span class="text-[#7fff00]">tailwindcss</span> & <span class="text-[#7fff00]">💀</span>
+  </footer>
+
+  <script>
+    // Typewriter effect for hero section
+    const el = document.getElementById('typewriter');
+    const phrases = [
+      "cybersecurity engineer.",
+      "penetration tester.",
+      "ctf player.",
+      "python developer.",
+      "building & breaking things."
+    ];
+    let currentPhrase = 0, currentChar = 0, isDeleting = false;
+    function type() {
+      let display = phrases[currentPhrase].substring(0, currentChar);
+      el.textContent = display;
+      if (!isDeleting && currentChar < phrases[currentPhrase].length) {
+        currentChar++;
+        setTimeout(type, 50);
+      } else if (isDeleting && currentChar > 0) {
+        currentChar--;
+        setTimeout(type, 25);
       } else {
-          html.classList.remove('dark');
-          icon.classList.remove('fa-sun');
-          icon.classList.add('fa-moon');
+        isDeleting = !isDeleting;
+        setTimeout(type, isDeleting ? 800 : 1200);
+        if (!isDeleting) {
+          currentPhrase = (currentPhrase + 1) % phrases.length;
+        }
       }
-      toggleBtn.addEventListener('click', () => {
-          html.classList.toggle('dark');
-          if (html.classList.contains('dark')) {
-              localStorage.theme = 'dark';
-              icon.classList.remove('fa-moon');
-              icon.classList.add('fa-sun');
-          } else {
-              localStorage.theme = 'light';
-              icon.classList.remove('fa-sun');
-              icon.classList.add('fa-moon');
-          }
-      });
-    </script>
+    }
+    type();
+  </script>
 </body>
 </html>
