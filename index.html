@@ -1,262 +1,304 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nairitya Tale | Cybersecurity Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-  <style>
-    body {
-      font-family: 'Fira Mono', 'Source Code Pro', 'Menlo', 'Monaco', monospace;
-      background: #14181e;
-      color: #b9ffe8;
-      min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
-    }
-    /* Glitch effect */
-    .glitch {
-      position: relative;
-      color: #b9ffe8;
-      font-weight: 700;
-      font-size: 2.8rem;
-      line-height: 1.2;
-      letter-spacing: 1px;
-      display: inline-block;
-      animation: glitch-skew 1s infinite linear alternate-reverse;
-    }
-    .glitch:before,
-    .glitch:after {
-      content: attr(data-text);
-      position: absolute;
-      left: 0; top: 0;
-      width: 100%;
-      overflow: hidden;
-      color: #00fff7;
-      opacity: 0.7;
-      z-index: -1;
-      clip: rect(0, 900px, 0, 0);
-    }
-    .glitch:before {
-      animation: glitch-anim 1s infinite linear alternate-reverse;
-      color: #00fff7;
-    }
-    .glitch:after {
-      animation: glitch-anim2 0.8s infinite linear alternate-reverse;
-      color: #ff00c8;
-    }
-    @keyframes glitch-anim {
-      0% { clip: rect(0, 9999px, 0, 0); }
-      5% { clip: rect(0, 9999px, 15px, 0); left:2px;}
-      10% { clip: rect(0, 9999px, 0, 0); left:0;}
-      15% { clip: rect(0, 9999px, 10px, 0); left:-2px;}
-      20% { clip: rect(0, 9999px, 0, 0); left:0;}
-      100% { clip: rect(0, 9999px, 0, 0);}
-    }
-    @keyframes glitch-anim2 {
-      0% { clip: rect(0, 9999px, 0, 0);}
-      10% { clip: rect(5px, 9999px, 20px, 0); left:-2px;}
-      15% { clip: rect(0, 9999px, 0, 0); left:0;}
-      25% { clip: rect(10px, 9999px, 25px, 0); left:2px;}
-      30% { clip: rect(0, 9999px, 0, 0); left:0;}
-      100% { clip: rect(0, 9999px, 0, 0);}
-    }
-    @keyframes glitch-skew {
-      0% { transform: skew(0deg);}
-      10% { transform: skew(-2deg);}
-      20% { transform: skew(2deg);}
-      30% { transform: skew(-1deg);}
-      40% { transform: skew(1deg);}
-      50% { transform: skew(0deg);}
-      100% { transform: skew(0deg);}
-    }
-    /* Blinking cursor */
-    .terminal-type::after {
-      content: "";
-      display: inline-block;
-      width: 12px;
-      height: 1.2em;
-      background: #b9ffe8;
-      margin-left: 5px;
-      vertical-align: middle;
-      animation: blink-cursor 1s steps(1) infinite;
-    }
-    @keyframes blink-cursor {
-      0%, 50% { opacity: 1; }
-      51%, 100% { opacity: 0; }
-    }
-    /* CRT scanline overlay */
-    .crt {
-      pointer-events: none;
-      position: fixed;
-      top:0; left:0; width:100vw; height:100vh;
-      z-index:999;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.01) 0px,
-        rgba(255,255,255,0.04) 2px,
-        transparent 4px,
-        transparent 6px
-      );
-      mix-blend-mode: lighten;
-      opacity: 0.3;
-    }
-    /* Section prompt style */
-    .section-title {
-      color: #00fff7;
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
-    }
-    .prompt {
-      color: #7fff00;
-      margin-right: 8px;
-    }
-    a {
-      color: #7fff00;
-      text-decoration: underline;
-    }
-    a:hover {
-      color: #fff;
-      background: #00fff7;
-    }
-    /* Responsive glitch font size */
-    @media (max-width: 640px) {
-      .glitch {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- CRT scanlines overlay -->
-  <div class="crt"></div>
+<html>
+	<head>
+		<title>Nairitya Tale - Personal Portfolio Website</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+			html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+			.blend {
+				mix-blend-mode: luminosity;
+			}
+			.collapsible {
+				background-color: white;
+				color: gray;
+				cursor: pointer;
+				padding: 18px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 18px;
+			}
+			.active, .collapsible:hover {
+				background-color: light-grey;
+				color: teal
+			}
+			.content {
+				padding: 0 15px;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.2s ease-out;
+				background-color: white;
+			}
+			/* Glitch effect */
+			.glitch {
+				position: relative;
+				color: #20e3b2;
+				font-weight: 700;
+				font-size: 2.3rem;
+				letter-spacing: 1px;
+				display: inline-block;
+				animation: glitch-skew 1s infinite linear alternate-reverse;
+			}
+			.glitch:before,
+			.glitch:after {
+				content: attr(data-text);
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%;
+				overflow: hidden;
+				color: #00fff7;
+				opacity: 0.7;
+				z-index: -1;
+				clip: rect(0, 900px, 0, 0);
+			}
+			.glitch:before {
+				animation: glitch-anim 1s infinite linear alternate-reverse;
+				color: #00fff7;
+			}
+			.glitch:after {
+				animation: glitch-anim2 0.8s infinite linear alternate-reverse;
+				color: #ff00c8;
+			}
+			@keyframes glitch-anim {
+				0% { clip: rect(0, 9999px, 0, 0); }
+				5% { clip: rect(0, 9999px, 15px, 0); left:2px;}
+				10% { clip: rect(0, 9999px, 0, 0); left:0;}
+				15% { clip: rect(0, 9999px, 10px, 0); left:-2px;}
+				20% { clip: rect(0, 9999px, 0, 0); left:0;}
+				100% { clip: rect(0, 9999px, 0, 0);}
+			}
+			@keyframes glitch-anim2 {
+				0% { clip: rect(0, 9999px, 0, 0);}
+				10% { clip: rect(5px, 9999px, 20px, 0); left:-2px;}
+				15% { clip: rect(0, 9999px, 0, 0); left:0;}
+				25% { clip: rect(10px, 9999px, 25px, 0); left:2px;}
+				30% { clip: rect(0, 9999px, 0, 0); left:0;}
+				100% { clip: rect(0, 9999px, 0, 0);}
+			}
+			@keyframes glitch-skew {
+				0% { transform: skew(0deg);}
+				10% { transform: skew(-2deg);}
+				20% { transform: skew(2deg);}
+				30% { transform: skew(-1deg);}
+				40% { transform: skew(1deg);}
+				50% { transform: skew(0deg);}
+				100% { transform: skew(0deg);}
+			}
+			@media (max-width: 640px) {
+				.glitch {
+					font-size: 1.2rem;
+				}
+			}
+		</style>
+	</head>
+<body class="w3-light-grey">
 
-  <!-- Navigation (terminal style) -->
-  <nav class="w-full flex justify-center py-4 bg-opacity-0 z-50">
-    <div class="space-x-8 text-base">
-      <a href="#about" class="hover:text-[#00fff7] transition">about</a>
-      <a href="#experience" class="hover:text-[#00fff7] transition">experience</a>
-      <a href="#projects" class="hover:text-[#00fff7] transition">projects</a>
-      <a href="#ctf" class="hover:text-[#00fff7] transition">ctf</a>
-      <a href="#contact" class="hover:text-[#00fff7] transition">contact</a>
-    </div>
-  </nav>
+<!-- Page Container -->
+<div class="w3-content w3-margin-top " style="max-width:1400px;">
 
-  <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center min-h-[70vh] text-center px-6 pt-16">
-    <div>
-      <span class="glitch block mb-2" data-text="nairitya tale">
-        nairitya tale
-      </span>
-    </div>
-    <div class="terminal-type text-xl sm:text-2xl mt-2 mb-6" id="typewriter"></div>
-    <div class="flex space-x-6 justify-center mt-2">
-      <a href="https://github.com/nairitya03" target="_blank" class="text-xl hover:text-[#00fff7]"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/nairityatale" target="_blank" class="text-xl hover:text-[#00fff7]"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:talenairitya@gmail.com" class="text-xl hover:text-[#00fff7]"><i class="fas fa-envelope"></i></a>
-    </div>
-  </section>
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+			<div class="w3-display-container">
+			  <img src="img/Avatar.jpg" style="width:100%" alt="Avatar">
+			  <div class="w3-display-bottomleft w3-container w3-text-white"> 
+			  <div>
+				<h2 class="glitch" data-text="Nairitya Tale">Nairitya Tale</h2>
+				<!-- Just the name is glitched -->
+			  </div>
+			  </div>
+			  
+			</div>
+			
+			<div class="w3-container">
+			  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"aria-hidden="true"></i> talenairitya@gmail.com</p>
+			  <p><i class="fa fa-phone fa-fw w3-margin-right fa-fw w3-margin-right w3-large w3-text-teal"aria-hidden="true"></i> +91-7224964799</p>
+			  
+			<script src="https://tryhackme.com/badge/280802"></script>
 
-  <!-- About -->
-  <section id="about" class="max-w-2xl mx-auto my-12 px-6">
-    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>about</div>
-    <div class="mb-4">
-      <span class="prompt">[+] </span>
-      I'm a cybersecurity engineer and developer with a passion for breaking, building, and securing things. I specialize in penetration testing, web application security, and CTFs. I love building tools and sharing knowledge with the community.
-    </div>
-    <div>
-      <span class="prompt">[+] </span>
-      <span class="font-bold">Skills:</span> Penetration Testing, Web Security, Python, Computer Vision, CTF Writeups, Reverse Engineering
-    </div>
-  </section>
+			
+			<p class="w3-large"><h5><b><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-large w3-text-teal" aria-hidden="true"></i>Education</b></h5></p>
+				<div class="w3-container">
+					
+					<h6><b> B.Tech - Computer Science and Engg. </b></h6>
+					<p> Oriental Institute of Science and Technology, Bhopal </p>
+					<p class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right "aria-hidden="true"></i>2017 - <span class="w3-tag w3-teal w3-round">Current</span></p>
+				</div>
+				
+				<div class="w3-container">
+					<h6><b> High School</b></h6>
+					<p> St Paul Higher Secondary School, Bhopal </p>
+					<p class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"aria-hidden="true"></i>2016 - 2017</p>
+				</div>	
+			
+			<p class="w3-large"><h5><b><i class="fa fa-superpowers fa-fw w3-margin-right w3-large w3-text-teal" aria-hidden="true"></i>Hobbies</b></h5></p>
+				<div class="w3-container">
+					<h6> Gaming & Editing  </h6>
+					<h6> Loves to Play Volleyball & Table Tennis </h6>
+					<h6> Reads Genere Like Mystry & Thriller  </h6>
+					
+				</div>
+			<p class="w3-large"><h5><b><i class="fa fa-globe fa-fw w3-margin-right w3-large w3-text-teal" aria-hidden="true"></i>Languages Known</b></h5></p>
+				<div class="w3-container">
+					<h6> Hindi </h6>
+					<h6> English</h6>	
+				</div>
+			</div>
+	<br>
+      </div><br>
 
-  <!-- Experience -->
-  <section id="experience" class="max-w-2xl mx-auto my-12 px-6">
-    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>experience</div>
-    <div class="mb-3">
-      <span class="prompt">[2020-2021]</span> Web Application VAPT Intern @ Supraja Technologies
+    <!-- End Left Column -->
     </div>
-    <div class="mb-3">
-      <span class="prompt">[2020]</span> DevMLOps Trainee @ Unnati Development and Training Centre Pvt. Ltd.
-    </div>
-    <div>
-      <span class="prompt">[2019]</span> IoT Trainee @ TechSim+
-    </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects" class="max-w-2xl mx-auto my-12 px-6">
-    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>projects</div>
-    <div class="mb-2"><span class="prompt">[cv]</span> <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Face%20Detection">Live Face Detection</a></div>
-    <div class="mb-2"><span class="prompt">[cv]</span> <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Car%20Detection">Car Detection</a></div>
-    <div class="mb-2"><span class="prompt">[cv]</span> <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Pedestrian%20Detection">Pedestrian Detection</a></div>
-    <div class="mb-2"><span class="prompt">[pygame]</span> <a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Music%20Player">Music Player</a></div>
-    <div class="mb-2"><span class="prompt">[mini]</span> <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Caesar%20Decipher">Caesar Decipher</a></div>
-    <div class="mb-2"><span class="prompt">[mini]</span> <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Password%20Generator">Password Generator</a></div>
-    <div class="mb-2"><span class="prompt">[tools]</span> <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/KeyLogger">KeyLogger</a></div>
-  </section>
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+			
+	<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Internships </h2>
 
-  <!-- CTF Writeups -->
-  <section id="ctf" class="max-w-2xl mx-auto my-12 px-6">
-    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>ctf writeups</div>
-    <div class="mb-2"><span class="prompt">[thm]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Pickle%20Rick">Pickle Rick</a></div>
-    <div class="mb-2"><span class="prompt">[thm]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Chocolate%20Factory">Chocolate Factory</a></div>
-    <div class="mb-2"><span class="prompt">[htb]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/HTB/Archetype/">HackTheBox - Archetype</a></div>
-    <div class="mb-2"><span class="prompt">[event]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/NahamCon%20CTF%202021/">NahamCon 2021</a></div>
-    <div class="mb-2"><span class="prompt">[event]</span> <a href="https://nairitya03.github.io/CTF-WriteUps/GrimmCon%20CTF%202020/">GrimmCon 2020</a></div>
-  </section>
+		<div class="w3-container">
+		  <h5 class="w3-opacity"><b>Web Application VAPT Intern at Supraja Technologies</b></h5>
+		  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August 2020 - May 2021</h6>
+		</div>
 
-  <!-- Contact -->
-  <section id="contact" class="max-w-2xl mx-auto my-12 px-6">
-    <div class="section-title flex items-center"><span class="prompt">&gt;_</span>contact</div>
-    <div class="mb-2">
-      <span class="prompt">[mail]</span> <a href="mailto:talenairitya@gmail.com">talenairitya@gmail.com</a>
+		<div class="w3-container">
+		  <h5 class="w3-opacity"><b>DevMLOps Trainee at Unnati Development and Training Centre Pvt. Ltd. </b></h5>
+		  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2020 - July 2020</h6>
+		</div>
+
+		<div class="w3-container">
+		  <h5 class="w3-opacity"><b>IoT Trainee at TechSim+ - The Symbol of Expertise</b></h5>
+		  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2019 - June 2019</h6>
+		  <br>
+		</div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-top">
+			
+			<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+			
+			<div class="list-style-type">
+		  
+			  <a type="toggle" class="collapsible"> Computer Vision Projects <i class="fa fa-level-down fa-fw w3-margin-right w3-text-teal" aria-hidden="true"></i></a>
+			  <div class="content">
+				  <ul>
+				  <li> Live Face Detection   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Face%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Car Detection   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Car%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Pedestrian Detection   <a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Pedestrian%20Detection" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  </ul>
+			  </div>
+			 <br>
+			 
+			 <a type="toggle" class="collapsible"> Pygame Projects <i class="fa fa-level-down fa-fw w3-margin-right w3-text-teal" aria-hidden="true"></i></a>
+			 <div class="content">
+				  <ul>
+				  <li> Music Player    <a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Music%20Player" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Text to Audio   <a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Text%20to%20Audio" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Classic Tiles   <a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Classic%20Tiles" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  </ul>
+			 </div> 
+			 <br>
+			 
+			 <a type="toggle" class="collapsible"> Side Hustle <i class="fa fa-level-down fa-fw w3-margin-right w3-text-teal" aria-hidden="true"></i></a>
+			 <div class="content">
+				  <ul>
+				  <li> Caesar Decipher  <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Caesar%20Decipher" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Password Generator   <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Password%20Generator" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> KeyLogger  <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/KeyLogger" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  <li> Web Browser  <a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Web%20Browser" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+				  
+				  </ul>
+			 </div>
+			
+			</div>
+	       <br>	
+      </div>
+	  <div class="w3-container w3-card w3-white w3-margin-top">
+			 <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-link fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>CTF Writeups</h2>
+			 <div class="list-style-type">
+			 
+					<a type="toggle" class="collapsible"> NahamCon 2021 <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
+					<div class="content">
+						  <ul>
+						  <li> NahamCon 2021   <a href="https://nairitya03.github.io/CTF-WriteUps/NahamCon%20CTF%202021/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  </ul>
+					</div>
+					<br>
+					
+					<a type="toggle" class="collapsible"> GrimmCon 2020 <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
+					<div class="content">
+						  <ul>
+						  <li> GrimmCon 2020   <a href="https://nairitya03.github.io/CTF-WriteUps/GrimmCon%20CTF%202020/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  </ul>
+					</div>
+					<br>
+					<a type="toggle" class="collapsible"> TryHackMe Rooms <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
+					<div class="content">
+						<ul>
+						  <li> Pickle Rick <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Pickle%20Rick" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  <li> Simple CTF <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Easy%20CTF" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>			
+						  <li> RootME <a href="https://nairitya03.github.io/CTF-WriteUps/THM/RootME/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>				  
+						  <li> C0ldd Box   <a href="https://nairitya03.github.io/CTF-WriteUps/THM/C0ldd_BOX/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  <li> Chocolate Factory   <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Chocolate%20Factory" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  <li> Cyborg   <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Cyborg" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  <li> Madeye's Castle  <a href="https://nairitya03.github.io/CTF-WriteUps/THM/Madeye's%20Castle" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+					<br>
+					<a type="toggle" class="collapsible"> HackTheBox Rooms <i class="fa fa-level-down fa-fw w3-center w3-text w3-text-teal" aria-hidden="true"></i></a>
+					<div class="content">
+						  <ul>
+						  <li> Archetype  <a href="https://nairitya03.github.io/CTF-WriteUps/HTB/Archetype/" target="_blank"><i class="fa fa-external-link w3-small w3-text-blue" aria-hidden="true"></i></a></li>
+						  </ul>
+					</div>
+					<br>
+			 </div>				
+			 <br>
+	  </div>
+    <!-- End Right Column -->
     </div>
-    <div class="mb-2">
-      <span class="prompt">[github]</span> <a href="https://github.com/nairitya03" target="_blank">github.com/nairitya03</a>
-    </div>
-    <div class="mb-2">
-      <span class="prompt">[linkedin]</span> <a href="https://www.linkedin.com/in/nairityatale" target="_blank">linkedin.com/in/nairityatale</a>
-    </div>
-  </section>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
 
-  <footer class="w-full text-center py-6 text-xs text-[#00fff7] tracking-widest mt-16">
-    &copy; 2025 nairitya tale | built with <span class="text-[#7fff00]">html</span>, <span class="text-[#7fff00]">tailwindcss</span> & <span class="text-[#7fff00]">💀</span>
-  </footer>
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me here!</p>
+  <a href="https://github.com/nairitya03" target="_blank"><i class="fa fa-github w3-hover-opacity w3-xlarge"></i></a>
+  <a href="https://www.linkedin.com/in/nairityatale" target="_blank"><i class="fa fa-linkedin w3-hover-opacity w3-xlarge"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/css/default.asp" target="_blank">w3.css</a> & <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">fontawesome</a> </p>
+</footer>
 
-  <script>
-    // Typewriter effect for hero section
-    const el = document.getElementById('typewriter');
-    const phrases = [
-      "cybersecurity engineer.",
-      "penetration tester.",
-      "ctf player.",
-      "python developer.",
-      "building & breaking things."
-    ];
-    let currentPhrase = 0, currentChar = 0, isDeleting = false;
-    function type() {
-      let display = phrases[currentPhrase].substring(0, currentChar);
-      el.textContent = display;
-      if (!isDeleting && currentChar < phrases[currentPhrase].length) {
-        currentChar++;
-        setTimeout(type, 50);
-      } else if (isDeleting && currentChar > 0) {
-        currentChar--;
-        setTimeout(type, 25);
-      } else {
-        isDeleting = !isDeleting;
-        setTimeout(type, isDeleting ? 800 : 1200);
-        if (!isDeleting) {
-          currentPhrase = (currentPhrase + 1) % phrases.length;
-        }
-      }
-    }
-    type();
-  </script>
+
+
+
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.maxHeight){
+		  content.style.maxHeight = null;
+		} else {
+		  content.style.maxHeight = content.scrollHeight + "px";
+		} 
+	  });
+	}	
+</script>
 </body>
 </html>
