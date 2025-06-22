@@ -7,6 +7,11 @@
     
     <!-- Modern CSS Framework - Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -32,47 +37,182 @@
         .skill-badge:hover {
             transform: translateY(-5px);
         }
+        /* --- Dark mode improvements --- */
+        body.dark {
+            background-color: #10151a !important;
+            color: #e0e6ed !important;
+        }
+        .dark .bg-white {
+            background-color: #181f26 !important;
+        }
+        .dark .bg-gray-50 {
+            background-color: #151a20 !important;
+        }
+        .dark .bg-gray-900 {
+            background-color: #10151a !important;
+        }
+        .dark .bg-gray-950 {
+            background-color: #0b1016 !important;
+        }
+        /* Fix headings in dark mode */
+        .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+            color: #f3f4f6 !important;
+        }
+        .dark .text-gray-50 {
+            color: #f8fafc !important;
+        }
+        .dark .text-gray-100 {
+            color: #f1f5f9 !important;
+        }
+        .dark .text-gray-200 {
+            color: #e2e8f0 !important;
+        }
+        .dark .text-gray-300 {
+            color: #cbd5e1 !important;
+        }
+        .dark .text-gray-400 {
+            color: #a3adc2 !important;
+        }
+        .dark .text-gray-500 {
+            color: #94a3b8 !important;
+        }
+        .dark .text-gray-600 {
+            color: #7b8794 !important;
+        }
+        .dark .text-gray-700 {
+            color: #64748b !important;
+        }
+        .dark .text-gray-800 {
+            color: #e0e6ed !important;
+        }
+        .dark .text-gray-900, .dark .text-gray-950 {
+            color: #f3f4f6 !important;
+        }
+        .dark .text-white {
+            color: #f8fafc !important;
+        }
+        .dark .text-teal-600 {
+            color: #5eead4 !important;
+        }
+        .dark .hover\:text-teal-800:hover {
+            color: #2dd4bf !important;
+        }
+        .dark a, .dark .hover\:text-teal-500:hover {
+            color: #5eead4 !important;
+        }
+        .dark .text-gray-400, .dark .text-gray-500, .dark .text-gray-600 {
+            color: #a3adc2 !important;
+        }
+        .dark .bg-teal-100 {
+            background-color: #134e4a !important;
+            color: #5eead4 !important;
+        }
+        .dark .bg-blue-100 {
+            background-color: #1e293b !important;
+            color: #60a5fa !important;
+        }
+        .dark .bg-purple-100 {
+            background-color: #312e81 !important;
+            color: #c4b5fd !important;
+        }
+        .dark .bg-green-100 {
+            background-color: #14532d !important;
+            color: #6ee7b7 !important;
+        }
+        .dark .bg-red-100 {
+            background-color: #7f1d1d !important;
+            color: #fca5a5 !important;
+        }
+        .dark .bg-blue-600 {
+            background-color: #2563eb !important;
+        }
+        .dark .hover\:bg-blue-700:hover {
+            background-color: #1d4ed8 !important;
+        }
+        .dark .bg-gray-200 {
+            background-color: #232b34 !important;
+        }
+        .dark .bg-gray-800 {
+            background-color: #232b34 !important;
+        }
+        .dark .shadow-lg, .dark .shadow-xl {
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.7) !important;
+        }
+        .dark .rounded-xl {
+            border: 1px solid #232b34;
+        }
+        .dark .bg-black {
+            background-color: #090c10 !important;
+        }
+        .dark .border-gray-200 {
+            border-color: #232b34 !important;
+        }
+        .dark .text-gray-400, .dark .text-gray-500, .dark .text-gray-600, .dark .text-gray-700 {
+            color: #a3adc2 !important;
+        }
+        .dark .text-gray-300 {
+            color: #cbd5e1 !important;
+        }
+        .dark .text-gray-200 {
+            color: #e2e8f0 !important;
+        }
+        .dark .text-gray-100 {
+            color: #f1f5f9 !important;
+        }
+        .dark .text-gray-50 {
+            color: #f8fafc !important;
+        }
     </style>
 </head>
-<body class="bg-gray-50">
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-sm z-50">
+    <nav class="fixed w-full bg-white dark:bg-gray-950 shadow-sm z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold gradient-text">NT.</a>
             <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-teal-500">About</a>
-                <a href="#experience" class="text-gray-600 hover:text-teal-500">Experience</a>
-                <a href="#projects" class="text-gray-600 hover:text-teal-500">Projects</a>
-                <a href="#ctf" class="text-gray-600 hover:text-teal-500">CTF</a>
-                <a href="#contact" class="text-gray-600 hover:text-teal-500">Contact</a>
+                <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">About</a>
+                <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">Experience</a>
+                <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">Projects</a>
+                <a href="#writeups" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">CTF Write-ups</a>
+                <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">Contact</a>
             </div>
+            <!-- Dark mode toggle button -->
+            <button id="dark-toggle" class="ml-4 p-2 rounded bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition">
+                <i id="dark-toggle-icon" class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-white">
+    <section class="pt-32 pb-20 bg-white dark:bg-gray-900">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
                     <h1 class="text-5xl font-bold mb-6">
                         Hi, I'm <span class="gradient-text">Nairitya Tale</span>
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Cybersecurity Engineer & Full Stack Developer
-                    </p>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                        Cybersecurity Professional & Developer
+                    </p> 
                     <div class="flex space-x-4">
-                        <a href="https://github.com/nairitya03" target="_blank" 
-                           class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition">
-                            <i class="fab fa-github mr-2"></i>GitHub
+                        <a href="mailto:nairityatale@gmail.com" target="_blank"
+                            class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-teal-500 transition" >
+                            <i class="fas fa-envelope mr-2"></i>Gmail
                         </a>
-                        <a href="https://www.linkedin.com/in/nairityatale" target="_blank"
-                           class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        <a href="https://www.linkedin.com/in/nairityatale/" target="_blank"
+                           class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition">
                             <i class="fab fa-linkedin mr-2"></i>LinkedIn
                         </a>
+                        <a href="https://github.com/nairitya03/" target="_blank" 
+                           class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-500 transition">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="md:w-1/2" data-aos="fade-left">
-                    <img src="img/Avatar.jpg" alt="Nairitya Tale" 
+                    <img src="img/Avatar.png" alt="Nairitya Tale" 
                          class="rounded-full w-64 h-64 object-cover mx-auto shadow-xl">
                 </div>
             </div>
@@ -80,7 +220,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50">
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-950">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center gradient-text">About Me</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -97,7 +237,12 @@
                 <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-xl font-semibold mb-4">Education</h3>
                     <div class="mb-6">
-                        <h4 class="font-medium">B.Tech - Computer Science and Engineering</h4>
+                        <h4 class="font-medium">MSc - Cybersecurity</h4>
+                    <p class="text-gray-600">Cardiff University, United Kingdom</p>
+                    <p class="text-teal-600">2023 - 2024</p>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold mb-2"> B.Tech - Computer Science and Engineering</h4>
                         <p class="text-gray-600">Oriental Institute of Science and Technology, Bhopal</p>
                         <p class="text-teal-600">2017 - 2021</p>
                     </div>
@@ -107,26 +252,28 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Experience</h2>
-            <div class="space-y-8">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-semibold mb-2">Web Application VAPT Intern</h3>
-                    <p class="text-teal-600 mb-2">Supraja Technologies</p>
-                    <p class="text-gray-600">August 2020 - May 2021</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-2">DevMLOps Trainee</h3>
-                    <p class="text-teal-600 mb-2">Unnati Development and Training Centre Pvt. Ltd.</p>
-                    <p class="text-gray-600">May 2020 - July 2020</p>
-                </div>
+<section id="experience" class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Experience</h2>
+        <div class="space-y-8">
+            
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-2">Software Engineer</h3>
+                <p class="text-teal-600 mb-2">Cybrilla Technologies</p>
+                <p class="text-gray-600">Sep 2021 - Jul 2023</p>
+            </div>
+                <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-2">Vulnerability Assesment & Penetration Testing Intern</h3>
+                <p class="text-teal-600 mb-2">Supraja Technologies</p>
+                <p class="text-gray-600">Aug 2020 - Jun 2021</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-950">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Featured Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -179,9 +326,9 @@
     </section>
 
     <!-- CTF Section -->
-    <section id="ctf" class="py-20 bg-white">
+    <section id="writeups" class="py-20 bg-white dark:bg-gray-900">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">CTF Writeups</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">CTF Write-ups</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- TryHackMe -->
                 <div class="bg-gray-50 rounded-xl shadow-lg p-8" data-aos="fade-up">
@@ -216,25 +363,26 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-950">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
             <div class="flex justify-center space-x-6">
-                <a href="mailto:talenairitya@gmail.com" class="text-gray-600 hover:text-teal-500">
+                <a href="mailto:nairityatale@gmail.com" class="text-gray-600 hover:text-teal-500">
                     <i class="fas fa-envelope text-2xl"></i>
                 </a>
-                <a href="https://github.com/nairitya03" target="_blank" class="text-gray-600 hover:text-teal-500">
-                    <i class="fab fa-github text-2xl"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/nairityatale" target="_blank" class="text-gray-600 hover:text-teal-500">
+                <a href="https://www.linkedin.com/in/nairityatale/" target="_blank" class="text-gray-600 hover:text-teal-500">
                     <i class="fab fa-linkedin text-2xl"></i>
                 </a>
+                <a href="https://github.com/nairitya03/" target="_blank" class="text-gray-600 hover:text-teal-500">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
+    <footer class="bg-gray-900 dark:bg-black text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p class="text-gray-400">&copy; 2025 Nairitya Tale. All rights reserved.</p>
         </div>
@@ -248,6 +396,34 @@
             offset: 100,
             once: true
         });
+      // Dark mode toggle logic
+      const toggle = document.getElementById('dark-toggle');
+      const icon = document.getElementById('dark-toggle-icon');
+      const html = document.documentElement;
+
+      // Load saved mode
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        html.classList.remove('dark');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+
+      toggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        if (html.classList.contains('dark')) {
+          localStorage.theme = 'dark';
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        } else {
+          localStorage.theme = 'light';
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
+        }
+      });
     </script>
 </body>
 </html>
