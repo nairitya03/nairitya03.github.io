@@ -210,12 +210,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typingElement) {
          
          const commands =[
-            'root:~# echo /dev/cybersec_analyst',
-            'root:~# echo /dev/software_engineer',
-            'root:~# echo /dev/pentester',
-            'root:~# echo /dev/tech_enthusiast',
-            'root:~# echo /dev/ai_researcher',
-            'root:~# echo /dev/opensource_contributor',
+            '$ echo /dev/cybersec_analyst',
+            '$ echo /dev/software_engineer',
+            '$ echo /dev/pentester',
+            '$ echo /dev/tech_enthusiast',
+            '$ echo /dev/ai_researcher',
+            '$ echo /dev/opensource_contributor',
         ];
         new AdvancedTypingAnimation(typingElement, commands, {
             typeSpeed: 100,
