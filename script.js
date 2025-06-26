@@ -208,15 +208,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Enhanced hero typing animation
     const typingElement = document.getElementById('typing-text');
     if (typingElement) {
-        const commands = [
-            '$ cat /dev/cybersec_analyst',
-            '$ cat /dev/software_engineer',
-            '$ cat /dev/pentester',
-            '$ cat /dev/tech_enthusiast',
-            '$ cat /dev/ai_researcher',
-            '$ cat /dev/opensource_contributor',
+         
+         const commands =[
+            'root:~# echo /dev/cybersec_analyst',
+            'root:~# echo /dev/software_engineer',
+            'root:~# echo /dev/pentester',
+            'root:~# echo /dev/tech_enthusiast',
+            'root:~# echo /dev/ai_researcher',
+            'root:~# echo /dev/opensource_contributor',
         ];
-        
         new AdvancedTypingAnimation(typingElement, commands, {
             typeSpeed: 100,
             deleteSpeed: 60,
