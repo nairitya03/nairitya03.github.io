@@ -210,12 +210,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typingElement) {
          
          const commands =[
-            '$ echo /dev/cybersec_analyst',
-            '$ echo /dev/software_engineer',
-            '$ echo /dev/pentester',
-            '$ echo /dev/tech_enthusiast',
-            '$ echo /dev/ai_researcher',
-            '$ echo /dev/opensource_contributor',
+            'echo /dev/cybersec_analyst',
+            'echo /dev/software_engineer',
+            'echo /dev/pentester',
+            'echo /dev/tech_enthusiast',
+            'echo /dev/ai_researcher',
+            'echo /dev/opensource_contributor',
         ];
         new AdvancedTypingAnimation(typingElement, commands, {
             typeSpeed: 100,
