@@ -210,12 +210,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typingElement) {
          
          const commands =[
-            'echo /dev/cybersec_analyst',
-            'echo /dev/software_engineer',
-            'echo /dev/pentester',
-            'echo /dev/tech_enthusiast',
-            'echo /dev/ai_researcher',
-            'echo /dev/opensource_contributor',
+            'echo "Cyber Security Analyst"',
+            'echo "Software Engineer"',
+            'echo "Pentester"',
+            'echo "Tech Enthusiast"',
+            'echo "AI Researcher"',
+            'echo "Open-source Contributor"',
         ];
         new AdvancedTypingAnimation(typingElement, commands, {
             typeSpeed: 100,
@@ -443,7 +443,7 @@ function showLoadingScreen() {
     loader.id = 'loader';
     loader.innerHTML = `
         <div style="text-align: center; color: var(--matrix-green); font-family: 'JetBrains Mono', monospace;">
-            <div style="font-size: 2rem; margin-bottom: 1rem;">/nt_hompage <style="font-size: 1rem;">Initializing...<span style="animation: terminal-blink 1s infinite;">█</span></div>
+            <div style="font-size: 2rem; margin-bottom: 1rem;">/nt_hompage <style="font-size: 1rem;">initializing...<span style="animation: terminal-blink 1s infinite;">█</span></div>
         </div>
     `;
     
