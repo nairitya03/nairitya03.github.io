@@ -1,429 +1,317 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nairitya Tale - Cybersecurity Engineer & Developer</title>
-    
-    <!-- Modern CSS Framework - Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class'
-      }
-    </script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #00BFA6 0%, #0088A3 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .skill-badge {
-            transition: all 0.3s ease;
-        }
-        .skill-badge:hover {
-            transform: translateY(-5px);
-        }
-        /* --- Dark mode improvements --- */
-        body.dark {
-            background-color: #10151a !important;
-            color: #e0e6ed !important;
-        }
-        .dark .bg-white {
-            background-color: #181f26 !important;
-        }
-        .dark .bg-gray-50 {
-            background-color: #151a20 !important;
-        }
-        .dark .bg-gray-900 {
-            background-color: #10151a !important;
-        }
-        .dark .bg-gray-950 {
-            background-color: #0b1016 !important;
-        }
-        /* Fix headings in dark mode */
-        .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-            color: #f3f4f6 !important;
-        }
-        .dark .text-gray-50 {
-            color: #f8fafc !important;
-        }
-        .dark .text-gray-100 {
-            color: #f1f5f9 !important;
-        }
-        .dark .text-gray-200 {
-            color: #e2e8f0 !important;
-        }
-        .dark .text-gray-300 {
-            color: #cbd5e1 !important;
-        }
-        .dark .text-gray-400 {
-            color: #a3adc2 !important;
-        }
-        .dark .text-gray-500 {
-            color: #94a3b8 !important;
-        }
-        .dark .text-gray-600 {
-            color: #7b8794 !important;
-        }
-        .dark .text-gray-700 {
-            color: #64748b !important;
-        }
-        .dark .text-gray-800 {
-            color: #e0e6ed !important;
-        }
-        .dark .text-gray-900, .dark .text-gray-950 {
-            color: #f3f4f6 !important;
-        }
-        .dark .text-white {
-            color: #f8fafc !important;
-        }
-        .dark .text-teal-600 {
-            color: #5eead4 !important;
-        }
-        .dark .hover\:text-teal-800:hover {
-            color: #2dd4bf !important;
-        }
-        .dark a, .dark .hover\:text-teal-500:hover {
-            color: #5eead4 !important;
-        }
-        .dark .text-gray-400, .dark .text-gray-500, .dark .text-gray-600 {
-            color: #a3adc2 !important;
-        }
-        .dark .bg-teal-100 {
-            background-color: #134e4a !important;
-            color: #5eead4 !important;
-        }
-        .dark .bg-blue-100 {
-            background-color: #1e293b !important;
-            color: #60a5fa !important;
-        }
-        .dark .bg-purple-100 {
-            background-color: #312e81 !important;
-            color: #c4b5fd !important;
-        }
-        .dark .bg-green-100 {
-            background-color: #14532d !important;
-            color: #6ee7b7 !important;
-        }
-        .dark .bg-red-100 {
-            background-color: #7f1d1d !important;
-            color: #fca5a5 !important;
-        }
-        .dark .bg-blue-600 {
-            background-color: #2563eb !important;
-        }
-        .dark .hover\:bg-blue-700:hover {
-            background-color: #1d4ed8 !important;
-        }
-        .dark .bg-gray-200 {
-            background-color: #232b34 !important;
-        }
-        .dark .bg-gray-800 {
-            background-color: #232b34 !important;
-        }
-        .dark .shadow-lg, .dark .shadow-xl {
-            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.7) !important;
-        }
-        .dark .rounded-xl {
-            border: 1px solid #232b34;
-        }
-        .dark .bg-black {
-            background-color: #090c10 !important;
-        }
-        .dark .border-gray-200 {
-            border-color: #232b34 !important;
-        }
-        .dark .text-gray-400, .dark .text-gray-500, .dark .text-gray-600, .dark .text-gray-700 {
-            color: #a3adc2 !important;
-        }
-        .dark .text-gray-300 {
-            color: #cbd5e1 !important;
-        }
-        .dark .text-gray-200 {
-            color: #e2e8f0 !important;
-        }
-        .dark .text-gray-100 {
-            color: #f1f5f9 !important;
-        }
-        .dark .text-gray-50 {
-            color: #f8fafc !important;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nairitya Tale</title>
+        <!-- <meta
+            name="description"
+            content="Nairitya Tale - Software Engineer specializing in Rust, C++, and performance-critical applications. Building the future, one line of code at a time."
+        /> -->
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 
-<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white dark:bg-gray-950 shadow-sm z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold gradient-text">NT.</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">About</a>
-                <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">Experience</a>
-                <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">Projects</a>
-                <a href="#writeups" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">CTF Write-ups</a>
-                <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-teal-500">Contact</a>
-            </div>
-            <!-- Dark mode toggle button -->
-            <button id="dark-toggle" class="ml-4 p-2 rounded bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition">
-                <i id="dark-toggle-icon" class="fas fa-moon"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <h1 class="text-5xl font-bold mb-6">
-                        Hi, I'm <span class="gradient-text">Nairitya Tale</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                        Cybersecurity Professional & Developer
-                    </p> 
-                    <div class="flex space-x-4">
-                        <a href="mailto:nairityatale@gmail.com" target="_blank"
-                            class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-teal-500 transition" >
-                            <i class="fas fa-envelope mr-2"></i>Gmail
-                        </a>
-                        <a href="https://www.linkedin.com/in/nairityatale/" target="_blank"
-                           class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition">
-                            <i class="fab fa-linkedin mr-2"></i>LinkedIn
-                        </a>
-                        <a href="https://github.com/nairitya03/" target="_blank" 
-                           class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-500 transition">
-                            <i class="fab fa-github mr-2"></i>GitHub
-                        </a>
-                        
+        <!-- Styles -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-flex">
+                    <a href="#home" class="nav-logo">NT<span class="terminal-blink">_</span></a>
+                    <div class="nav-links">
+                        <a href="#home">./home</a>
+                        <a href="#about">./about</a>
+                        <a href="#experience">./experience</a>
+                        <a href="#projects">./projects</a>
+                        <a href="#contact">./contact</a>
                     </div>
+                    <button class="nav-mobile-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-                <div class="md:w-1/2" data-aos="fade-left">
-                    <img src="img/Avatar.png" alt="Nairitya Tale" 
-                         class="rounded-full w-64 h-64 object-cover mx-auto shadow-xl">
+                <div class="nav-mobile" id="mobile-menu">
+                    <a href="#home">./home</a>
+                    <a href="#about">./about</a>
+                    <a href="#projects">./projects</a>
+                    <a href="#experience">./experience</a>
+                    <a href="#contact">./contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Matrix Rain Canvas -->
+        <canvas id="matrix-rain" class="matrix-rain"></canvas>
+
+        <!-- Cyberpunk HUD -->
+        <div class="cyberpunk-hud">
+            <div class="hud-element hud-top-right">
+                <div class="hud-text">
+                    systems: <span class="text-matrix">online</span>
+                </div>
+                <div class="hud-text">
+                    connection: <span class="text-matrix">secure</span>
+                </div>                
+            </div>
+            <div class="hud-element hud-bottom-right">
+                <div class="hud-text">
+                    user: <span class="text-matrix">guest</span>
+                </div>
+                <div class="hud-text">
+                    access: <span class="text-matrix">user</span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-950">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">About Me</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-semibold mb-4">Skills</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-badge px-4 py-2 bg-teal-100 text-teal-800 rounded-full">Penetration Testing</span>
-                        <span class="skill-badge px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Web Security</span>
-                        <span class="skill-badge px-4 py-2 bg-purple-100 text-purple-800 rounded-full">Python</span>
-                        <span class="skill-badge px-4 py-2 bg-green-100 text-green-800 rounded-full">Computer Vision</span>
-                        <span class="skill-badge px-4 py-2 bg-red-100 text-red-800 rounded-full">CTF</span>
+        <!-- Hero Section -->
+        <section id="home" class="hero"><div class="hero-background"> <div class="hero-overlay"></div></div>
+
+            <div class="hero-content">
+                <div class="hero-avatar"><img src="img/avatar.jpg"alt="avatar"/></div>
+
+                <h1 class="hero-title">
+                    <span class="title-white">Nairitya</span>
+                    <span class="title-matrix"> Tale</span>
+                </h1>
+
+                <div class="hero-terminal">$ <span id="typing-text"></span><span class="terminal-cursor">|</span> </div>
+
+                <p class="hero-description">
+                    Security Engineer with expertise in <span class="text-matrix">Penetration Testing</span> & <span class="text-matrix">Secure Development</span>. Think like an attacker, build like a defender, one vulnerability at a time.
+                </p>
+                <div class="hero-social">
+                    <a href="https://linkedin.com/in/nairityatale/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:nairityatale@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/nairitya03/"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#experience" class="cyber-button">./experience</a>
+                    <a href="#contact" class="cyber-button">./contact_me</a>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h3 class="section-title"><span class="text-matrix">$</span> whoami</h3>
+
+                <div class="about-grid">
+                    <div class="about-row">
+                        <div class="about-info">
+                            <div class="info-card">
+                                <h3>./about_me</h3>
+                                <p>
+                                    I bridge the gap between penetration testing and secure development as a cybersecurity specialist with an MSc from Cardiff University alongside engineering experience. My unique edge is that I think like an attacker but build like a defender. I translate complex security risks into business language that stakeholders can understand, turning weakness into fortified strengths.
+                                </p>
+                                <p>
+                                   I am eJPT certified and have hands-on experience with technologies like Burp Suite, Wireshark, and Splunk. From OWASP-based penetration testing to protecting CI/CD pipelines and designing risk frameworks, my focus is on building solutions that provide tangible business value.
+                                </p>
+                                <p>
+                                    When I'm not debugging alerts or optimising code, you will find me talking about coffee and exploring the latest innovations in technology.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-columns">
+                        <div class="skill-card">
+                            <h3>./tech_stack</h3>
+                            <div class="skills-grid">
+                                <!-- Languages -->
+                                <div class="skill-col">
+                                    <h4>Core Skills</h4>
+                                    <ul>
+                                        <li>Penetration Testing</li>
+                                        <li>Secure Code Review</li>
+                                        <li>Cyber Risk Assessment</li>
+                                        <li>Vulnerability Assessment</li>
+                                        <li>Static Testing (SAST)</li>
+                                        <li>Dynamic Testing (DAST)</li>
+
+                                    </ul>
+                                </div>
+                                <!-- Software & Tools -->
+                                <div class="skill-col">
+                                    <h4>Software & Tools</h4>
+                                    <ul>
+                                        <li>Postman</li>
+                                        <li>SQLMap</li>
+                                        <li>Burp Suite</span></li>
+                                        <li>Splunk</li>
+                                        <li>Wireshark</li>
+                                        <li>Nmap</li>
+                                    </ul>
+                                </div>
+                                <!-- Methodologies -->
+                                <div class="skill-col">
+                                    <h4>Methodologies</h4>
+                                    <ul>
+                                        <li>OWASP Top 10</li>
+                                        <li>Automation</li>
+                                        <li>Project Management</li>
+                                        <li>Agile Development</li>
+                                        <li>SIEM Implementation</li>
+                                        <li>Secure CI/CD Pipelines</li>
+                                    </ul>
+                                </div>
+                                <!-- Languages -->
+                                <div class="skill-col">
+                                    <h4>Languages</h4>
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Java</li>
+                                        <li>C++</li>
+                                        <li>SQL</li>
+                                        <li>Git</li>
+                                        <li>Bash</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-certification">
+                            <div class="info-card"><h3>./certificates</h3>
+                                <ul>
+                                    <li>CompTIA Security+ (In Progress)</li>
+                                    <li>eJPT (INE Security)</li>
+                                    <li>SOC Level 1 (TryHackMe)</li>
+                                    <li>MTA Python (Microsoft)</li>
+                                    <li>Cybersecurity Essentials (Cisco)</li>
+                                    <li>Linux Fundamentals (Cisco)</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-4">Education</h3>
-                    <div class="mb-6">
-                        <h4 class="font-medium">MSc - Cybersecurity</h4>
-                    <p class="text-gray-600">Cardiff University, United Kingdom</p>
-                    <p class="text-teal-600">2023 - 2024</p>
-                    </div>
-                    <div class="mb-6">
-                        <h4 class="text-xl font-semibold mb-2"> B.Tech - Computer Science and Engineering</h4>
-                        <p class="text-gray-600">Oriental Institute of Science and Technology, Bhopal</p>
-                        <p class="text-teal-600">2017 - 2021</p>
-                    </div>
-                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+<section id="experience" class="experience">
+    <div class="container">
+        <h3 class="section-title"> <span class="text-matrix">$</span> cat ./work_journey.log</h3>
+
+        <div class="experience-item">
+            <div class="experience-period"> <span>Sep 2021 – Jul 2023</span> </div>
+            <div class="experience-content">
+                <h3>Software Engineer</h3>
+                <h4>Cybrilla, Bangalore, India</h4>
+                <p>As a Software Engineer at Cybrilla, a Fintech Startup, I wore multiple hats and contributed to various aspects of the development process.</p>
+                <ul>
+                    <li>Dev: Implemented new features and improved existing functionality</li>
+                    <li>QA: Conducted testing and validation of new features</li>
+                    <li>Client Support & Monitoring: Assisted in troubleshooting and resolving client issues</li>
+                    
+                </ul>
             </div>
         </div>
-    </section>
 
-    <!-- Experience Section -->
-<section id="experience" class="py-20 bg-white dark:bg-gray-900">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Experience</h2>
-        <div class="space-y-8">
-            
-            <div class="bg-gray-50 p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                <div class="mb-8">
-                <h3 class="text-xl font-semibold mb-2">Software Engineer</h3>
-                <p class="text-teal-600 mb-2">Cybrilla Technologies</p>
-                <p class="text-gray-600">Sep 2021 - Jul 2023</p>
-            </div>
-                <div class="mb-8">
-                <h3 class="text-xl font-semibold mb-2">Vulnerability Assesment & Penetration Testing Intern</h3>
-                <p class="text-teal-600 mb-2">Supraja Technologies</p>
-                <p class="text-gray-600">Aug 2020 - Jun 2021</p>
+        <div class="experience-item">
+            <div class="experience-period"> <span>Aug 2020 – Jun 2021</span> </div>
+            <div class="experience-content">
+                <h3>Penetration Testing Intern</h3>
+                <h4>Supraja Technologies (Remote)</h4>
+                <p>As a pentesting intern, I conducted vulnerability assessments and penetration testing on various web applications using OWASP methodologies.</p>
+                <ul>
+                    <li>Testing: Performed web app tests, network tests, and privilege escalation</li>
+                    <li>POC: Developed proof-of-concept exploits for identified vulnerabilities</li>
+                    <li>Reporting: Reported vulnerabilities and suggested remediation strategies</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-950">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Computer Vision Projects -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-4">Computer Vision Projects</h3>
-                        <ul class="space-y-2">
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Face%20Detection" 
-                                  class="text-teal-600 hover:text-teal-800">Live Face Detection</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Car%20Detection"
-                                  class="text-teal-600 hover:text-teal-800">Car Detection</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/OpenCV/Pedestrian%20Detection"
-                                  class="text-teal-600 hover:text-teal-800">Pedestrian Detection</a></li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Pygame Projects -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-4">Pygame Projects</h3>
-                        <ul class="space-y-2">
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Music%20Player"
-                                  class="text-teal-600 hover:text-teal-800">Music Player</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Text%20to%20Audio"
-                                  class="text-teal-600 hover:text-teal-800">Text to Audio</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Pygame/Classic%20Tiles"
-                                  class="text-teal-600 hover:text-teal-800">Classic Tiles</a></li>
-                        </ul>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h3 class="section-title"><span class="text-matrix">$</span> ls -la ./projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
+                            alt="rust-text-editor screenshot" />
+                        <div class="project-content">
+                            <h3>Cyber-Zero: AI Copilot</h3>
+                            <p>A cutting-edge AI copilot designed to assist security proffessionals to make informed decisions in real-time. It can analyse code, ressearch
+                                vulnerabilities, and provide actionable insights to enhance security posture.</p>
+                            </p>
+                            <!-- <div class="project-tags"><span>Rust</span> <span>TUI</span> <span>Performance</span></div> -->
+                            <div class="project-links"><a href="https://github.com/nairitya03/cyber_zero/"><i class="fab fa-github"></i> Code</a></div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Side Projects -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-4">Security Tools</h3>
-                        <ul class="space-y-2">
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Caesar%20Decipher"
-                                  class="text-teal-600 hover:text-teal-800">Caesar Decipher</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/Password%20Generator"
-                                  class="text-teal-600 hover:text-teal-800">Password Generator</a></li>
-                            <li><a href="https://github.com/nairitya03/Projects/tree/master/Mini-Projects/KeyLogger"
-                                  class="text-teal-600 hover:text-teal-800">KeyLogger</a></li>
-                        </ul>
+                    <div class="project-card" >
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
+                            alt="rust-text-editor screenshot" />
+                        <div class="project-content">
+                            <h3>Face Detection</h3>
+                            <p> A real-time face detection application built with Python and OpenCV. Optimised to run detection even in low light conditions. It can detect faces in blurry images, identifying dark.</p>
+                            <!-- <div class="project-tags"><span>Rust</span> <span>TUI</span> <span>Performance</span></div> -->
+                            <div class="project-links"><a href="https://github.com/nairitya03/Major_Project/"><i class="fab fa-github"></i> Code</a></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
+                            alt="rust-text-editor screenshot" />
+                        <div class="project-content">
+                            <h3>Other Projects</h3>
+                            <p> Explore my other side projects on GitHub, showcasing a variety of technologies and solutions.</p>
+                            <!-- <div class="project-tags"><span>Rust</span> <span>TUI</span> <span>Performance</span></div> -->
+                            <div class="project-links"><a href="https://github.com/nairitya03/Projects/"><i class="fab fa-github"></i> Code</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTF Section -->
-    <section id="writeups" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">CTF Write-ups</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- TryHackMe -->
-                <div class="bg-gray-50 rounded-xl shadow-lg p-8" data-aos="fade-up">
-                    <h3 class="text-xl font-semibold mb-6">TryHackMe Rooms</h3>
-                    <div class="mb-6">
-                        <script src="https://tryhackme.com/badge/280802"></script>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h3 class="section-title"><span class="text-matrix">$</span> ./contact</h3>
+
+                    <div class="contact-card">
+                        <div class="contact-text">
+                            <p class="contact-intro">
+                                Ready to collaborate on your next project?
+                            </p>
+                            <p>
+                               Whether you need help securing applications, improving system performance, or collaborating on open source security tools, I’d love to connect.
+                            </p>
+                        </div>
+
+                        <div class="contact-buttons">
+                            <a href="mailto:nairityatale@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Send Email </a>
+                            <!-- <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> Download Resume</a> -->
+                        </div>
+
+                        <div class="contact-social">
+                           <a href="https://linkedin.com/in/nairityatale/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/nairitya03/"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                    <ul class="space-y-2">
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/THM/Pickle%20Rick"
-                              class="text-teal-600 hover:text-teal-800">Pickle Rick</a></li>
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/THM/Chocolate%20Factory"
-                              class="text-teal-600 hover:text-teal-800">Chocolate Factory</a></li>
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/THM/Madeye's%20Castle"
-                              class="text-teal-600 hover:text-teal-800">Madeye's Castle</a></li>
-                    </ul>
-                </div>
-
-                <!-- Other CTFs -->
-                <div class="bg-gray-50 rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-6">Featured CTF Events</h3>
-                    <ul class="space-y-2">
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/NahamCon%20CTF%202021/"
-                              class="text-teal-600 hover:text-teal-800">NahamCon 2021</a></li>
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/GrimmCon%20CTF%202020/"
-                              class="text-teal-600 hover:text-teal-800">GrimmCon 2020</a></li>
-                        <li><a href="https://nairitya03.github.io/CTF-WriteUps/HTB/Archetype/"
-                              class="text-teal-600 hover:text-teal-800">HackTheBox - Archetype</a></li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-950">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
-            <div class="flex justify-center space-x-6">
-                <a href="mailto:nairityatale@gmail.com" class="text-gray-600 hover:text-teal-500">
-                    <i class="fas fa-envelope text-2xl"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/nairityatale/" target="_blank" class="text-gray-600 hover:text-teal-500">
-                    <i class="fab fa-linkedin text-2xl"></i>
-                </a>
-                <a href="https://github.com/nairitya03/" target="_blank" class="text-gray-600 hover:text-teal-500">
-                    <i class="fab fa-github text-2xl"></i>
-                </a>
-                
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-copyright">
+                    © 2025 Nairitya Tale. All rights reserved.
+                </p>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 dark:bg-black text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-400">&copy; 2025 Nairitya Tale. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- AOS Init -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            offset: 100,
-            once: true
-        });
-      // Dark mode toggle logic
-      const toggle = document.getElementById('dark-toggle');
-      const icon = document.getElementById('dark-toggle-icon');
-      const html = document.documentElement;
-
-      // Load saved mode
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        html.classList.add('dark');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-      } else {
-        html.classList.remove('dark');
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-      }
-
-      toggle.addEventListener('click', () => {
-        html.classList.toggle('dark');
-        if (html.classList.contains('dark')) {
-          localStorage.theme = 'dark';
-          icon.classList.remove('fa-moon');
-          icon.classList.add('fa-sun');
-        } else {
-          localStorage.theme = 'light';
-          icon.classList.remove('fa-sun');
-          icon.classList.add('fa-moon');
-        }
-      });
-    </script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
